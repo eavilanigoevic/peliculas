@@ -9,7 +9,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<ListadoPeliculas />} />
-        {/* <Route path="/blog" element={<Blog />} /> */}
+        <Route path="/blog" element={<Blog />} />
       </Routes>
       {/* Switch fue reemplazado por Routes */}
     </BrowserRouter>
