@@ -1,4 +1,3 @@
-import "./App.css";
 import Pelicula from "./Pelicula";
 import PageWrapper from "./PageWrapper";
 import Paginacion from "./Paginacion";

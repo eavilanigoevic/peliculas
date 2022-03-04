@@ -1,146 +1,8 @@
-function PageWrapper(props) {
+import { Link, Navigate, NavLink } from "react-router-dom";
+
+export default function PageWrapper(props) {
   return (
     <div>
-      <div id="preloader">
-        <img
-          className="logo"
-          src="images/logo1.png"
-          alt=""
-          width="119"
-          height="58"
-        />
-        <div id="status">
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-      <div className="login-wrapper" id="login-content">
-        <div className="login-content">
-          <a href="#" className="close">
-            x
-          </a>
-          <h3>Login</h3>
-          <form method="post" action="#">
-            <div className="row">
-              <label for="username">
-                Username:
-                <input
-                  type="text"
-                  name="username"
-                  id="username"
-                  placeholder="Hugh Jackman"
-                  pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{8,20}$"
-                  required="required"
-                />
-              </label>
-            </div>
-
-            <div className="row">
-              <label for="password">
-                Password:
-                <input
-                  type="password"
-                  name="password"
-                  id="password"
-                  placeholder="******"
-                  pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
-                  required="required"
-                />
-              </label>
-            </div>
-            <div className="row">
-              <div className="remember">
-                <div>
-                  <input type="checkbox" name="remember" value="Remember me" />
-                  <span>Remember me</span>
-                </div>
-                <a href="#">Forget password ?</a>
-              </div>
-            </div>
-            <div className="row">
-              <button type="submit">Login</button>
-            </div>
-          </form>
-          <div className="row">
-            <p>Or via social</p>
-            <div className="social-btn-2">
-              <a className="fb" href="#">
-                <i className="ion-social-facebook"></i>Facebook
-              </a>
-              <a className="tw" href="#">
-                <i className="ion-social-twitter"></i>twitter
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="login-wrapper" id="signup-content">
-        <div className="login-content">
-          <a href="#" className="close">
-            x
-          </a>
-          <h3>sign up</h3>
-          <form method="post" action="#">
-            <div className="row">
-              <label for="username-2">
-                Username:
-                <input
-                  type="text"
-                  name="username"
-                  id="username-2"
-                  placeholder="Hugh Jackman"
-                  pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{8,20}$"
-                  required="required"
-                />
-              </label>
-            </div>
-
-            <div className="row">
-              <label for="email-2">
-                your email:
-                <input
-                  type="password"
-                  name="email"
-                  id="email-2"
-                  placeholder=""
-                  pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
-                  required="required"
-                />
-              </label>
-            </div>
-            <div className="row">
-              <label for="password-2">
-                Password:
-                <input
-                  type="password"
-                  name="password"
-                  id="password-2"
-                  placeholder=""
-                  pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
-                  required="required"
-                />
-              </label>
-            </div>
-            <div className="row">
-              <label for="repassword-2">
-                re-type Password:
-                <input
-                  type="password"
-                  name="password"
-                  id="repassword-2"
-                  placeholder=""
-                  pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
-                  required="required"
-                />
-              </label>
-            </div>
-            <div className="row">
-              <button type="submit">sign up</button>
-            </div>
-          </form>
-        </div>
-      </div>
-
       <header className="ht-header">
         <div className="container">
           <nav className="navbar navbar-default navbar-custom">
@@ -176,61 +38,10 @@ function PageWrapper(props) {
                   <a href="#page-top"></a>
                 </li>
                 <li className="dropdown first">
-                  <a
-                    className="btn btn-default dropdown-toggle lv1"
-                    data-toggle="dropdown"
-                  >
-                    Home <i className="fa fa-angle-down" aria-hidden="true"></i>
-                  </a>
-                  <ul className="dropdown-menu level1">
-                    <li>
-                      <a href="index-2.html">Home 01</a>
-                    </li>
-                    <li>
-                      <a href="homev2.html">Home 02</a>
-                    </li>
-                    <li>
-                      <a href="homev3.html">Home 03</a>
-                    </li>
-                  </ul>
+                  <NavLink to="/">Home</NavLink>
                 </li>
                 <li className="dropdown first">
-                  <a
-                    className="btn btn-default dropdown-toggle lv1"
-                    data-toggle="dropdown"
-                    data-hover="dropdown"
-                  >
-                    movies
-                    <i className="fa fa-angle-down" aria-hidden="true"></i>
-                  </a>
-                  <ul className="dropdown-menu level1">
-                    <li className="dropdown">
-                      <a
-                        href="#"
-                        className="dropdown-toggle"
-                        data-toggle="dropdown"
-                      >
-                        Movie grid<i className="ion-ios-arrow-forward"></i>
-                      </a>
-                      <ul className="dropdown-menu level2">
-                        <li>
-                          <a href="moviegrid.html">Movie grid</a>
-                        </li>
-                        <li>
-                          <a href="moviegridfw.html">movie grid full width</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a href="movielist.html">Movie list</a>
-                    </li>
-                    <li>
-                      <a href="moviesingle.html">Movie single</a>
-                    </li>
-                    <li className="it-last">
-                      <a href="seriessingle.html">Series single</a>
-                    </li>
-                  </ul>
+                  <NavLink to="blog">BLOG</NavLink>
                 </li>
                 <li className="dropdown first">
                   <a
@@ -393,6 +204,7 @@ function PageWrapper(props) {
                   <i className="ion-grid"></i>
                 </a>
               </div>
+
               {props.children}
             </div>
             <div className="col-md-4 col-sm-12 col-xs-12">
@@ -471,24 +283,6 @@ function PageWrapper(props) {
                     </div>
                   </form>
                 </div>
-                <div className="ads">
-                  <img src="images/uploads/ads1.png" alt="" />
-                </div>
-                <div className="sb-facebook sb-it">
-                  <h4 className="sb-title">Find us on Facebook</h4>
-                  <iframe
-                    src="#"
-                    data-src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ftemplatespoint.net%2F%3Ffref%3Dts&tabs=timeline&width=340&height=315px&small_header=true&adapt_container_width=false&hide_cover=false&show_facepile=true&appId"
-                    height="315"
-                  ></iframe>
-                </div>
-                {/*                 <div className="sb-twitter sb-it">
-                  <h4 className="sb-title">Tweet to us</h4>
-                  <div className="slick-tw">
-                    <div className="tweet item" id=""></div>
-                    <div className="tweet item" id=""></div>
-                  </div>
-                </div> */}
               </div>
             </div>
           </div>
@@ -599,5 +393,3 @@ function PageWrapper(props) {
     </div>
   );
 }
-
-export default PageWrapper;

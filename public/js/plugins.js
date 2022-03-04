@@ -215,7 +215,7 @@
       })
     }
   })
-  $(window).on('resize', function () {
+/*   $(window).on('resize', function () {
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(function(){
       if($(window).width() >= 768) // Breakpoin plugin is activated (768px)
@@ -232,7 +232,7 @@
             $(this).find('.dropdown').off('mouseenter.bs.dropdownhover mouseleave.bs.dropdownhover')
         })
     }, 200)
-  })
+  }) */
 
 }(jQuery);
 
